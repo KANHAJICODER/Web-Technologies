@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show and Hide Password</title>
+</head>
+<body>
+
+<h1>Login Form</h1>
+
+<form>
+    <label>Username:</label>
+    <input type="text" id="username">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <br><br>
+
+    <input type="checkbox" onclick="showPassword()">
+    <label>Show Password</label>
+</form>
+
+<script>
+    function showPassword() {
+        var x = document.getElementById("password");
+
+        if (x.type === "password") {
+            x.type = "text";
+        }
+        else {
+            x.type = "password";
+        }
+    }
+</script>
+
+</body>
+</html>

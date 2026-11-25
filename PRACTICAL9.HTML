@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Growing and Shrinking</title>
+</head>
+<body>
+
+<h2 id="text">ITM SLS BARODA UNIVERSITY</h2>
+
+<script>
+    var size = 15;
+    var grow = true;
+
+    function changeSize() {
+        var text = document.getElementById("text");
+
+        text.style.fontSize = size + "px";
+
+        if (grow) {
+            size++;
+
+            if (size >= 50) {
+                grow = false;
+            }
+        }
+        else {
+            size--;
+
+            if (size <= 15) {
+                grow = true;
+            }
+        }
+    }
+
+    setInterval(changeSize, 100);
+</script>
+
+</body>
+</html>
